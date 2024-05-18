@@ -23,8 +23,6 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Divider } from "@tremor/react";
-import { CloudPrivacyNotice } from "@/features/auth/components/AuthCloudPrivacyNotice";
-import { CloudRegionSwitch } from "@/features/auth/components/AuthCloudRegionSwitch";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { Shield } from "lucide-react";
@@ -288,7 +286,6 @@ export default function SignIn({ authProviders, signUpDisabled }: PageProps) {
 
         <div className="mt-14 bg-white px-6 py-10 shadow sm:mx-auto sm:w-full sm:max-w-[480px] sm:rounded-lg sm:px-12">
           <div className="space-y-6">
-            <CloudRegionSwitch />
             {authProviders.credentials ? (
               <Form {...credentialsForm}>
                 <form
@@ -406,7 +403,6 @@ export default function SignIn({ authProviders, signUpDisabled }: PageProps) {
             </p>
           ) : null}
         </div>
-        <CloudPrivacyNotice action="signing in" />
       </div>
     </>
   );

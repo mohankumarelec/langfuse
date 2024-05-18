@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "pnpm run db:generate && next start",
     "dev": "pnpm run db:generate && next dev",
     "build": "pnpm run db:generate && next build",
-    "start": "next start",
     "lint": "next lint",
     "db:generate": "prisma generate --schema=./src/prisma/schema.prisma"
   },

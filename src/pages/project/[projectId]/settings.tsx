@@ -6,7 +6,6 @@ import { DeleteProjectButton } from "@/features/projects/components/DeleteProjec
 import { HostNameProject } from "@/features/projects/components/HostNameProject";
 import { TransferOwnershipButton } from "@/features/projects/components/TransferOwnershipButton";
 import RenameProject from "@/features/projects/components/RenameProject";
-import { LlmApiKeyList } from "@/features/public-api/components/LLMApiKeyList";
 
 export default function SettingsPage() {
   const router = useRouter();
@@ -17,7 +16,6 @@ export default function SettingsPage() {
       <div className="flex flex-col gap-10">
         <HostNameProject />
         <ApiKeyList projectId={projectId} />
-        <LlmApiKeyList projectId={projectId} />
         <ProjectMembersTable projectId={projectId} />
         <RenameProject projectId={projectId} />
         <div className="space-y-3">

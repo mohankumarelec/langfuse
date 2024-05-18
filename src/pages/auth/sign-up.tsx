@@ -18,8 +18,6 @@ import type * as z from "zod";
 import { env } from "@/env.mjs";
 import { useState } from "react";
 import { LangfuseIcon } from "@/components/LangfuseLogo";
-import { CloudPrivacyNotice } from "@/features/auth/components/AuthCloudPrivacyNotice";
-import { CloudRegionSwitch } from "@/features/auth/components/AuthCloudRegionSwitch";
 import { SSOButtons, type PageProps } from "@/pages/auth/sign-in";
 import { PasswordInput } from "@/components/ui/password-input";
 import { Divider } from "@tremor/react";
@@ -105,7 +103,6 @@ export default function SignIn({ authProviders }: PageProps) {
         ) : null}
 
         <div className="mt-14 bg-white px-6 py-10 shadow sm:mx-auto sm:w-full sm:max-w-[480px] sm:rounded-lg sm:px-12">
-          <CloudRegionSwitch isSignUpPage />
           <Form {...form}>
             <form
               className="space-y-6"
@@ -198,8 +195,6 @@ export default function SignIn({ authProviders }: PageProps) {
             </Link>
           </p>
         </div>
-
-        <CloudPrivacyNotice action="creating an account" />
       </div>
     </>
   );
